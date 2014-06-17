@@ -1,0 +1,14 @@
+[user]
+    email = web@css.js.cn
+    name = Chiao
+[alias]
+    co = checkout
+    br = branch
+    re = remote
+    st = status
+    ci = commit
+    last = log -1 HEAD
+    unstage = reset HEAD --
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[core]
+    autocrlf = true
