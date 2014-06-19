@@ -12,3 +12,10 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [core]
     autocrlf = true
+[merge]
+    tool = gvim
+[mergetool]
+    prompt = false
+    keepBackup = false
+[mergetool "gvim"]
+    cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
