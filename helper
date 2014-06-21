@@ -1,5 +1,5 @@
 #!/bin/bash
-watched_files=".gitconfig .bash_profile .bash_aliases"
+watched_files=".gitconfig .bash_profile .bash_aliases .gitignore_global"
 
 if [ "-b" = "$1" ]
 then

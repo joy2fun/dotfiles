@@ -1,6 +1,8 @@
 [core]
     autocrlf = input
+    editor = vim
     fileMode = false
+    excludesfile = ~/.gitignore_global
 [user]
     name = joy2fun
     email = web@css.js.cn
@@ -13,6 +15,7 @@
     last = log -1 HEAD
     unstage = reset HEAD --
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    ignore = git update-index --assume-unchanged 
 [merge]
     tool = fugitive
 [mergetool]
