@@ -1,5 +1,6 @@
 #!/bin/bash
-watched_files=".gitconfig .bash_profile .bash_aliases .gitignore_global"
+cd ~
+watched_files=".zshrc .bashrc .gitconfig .bash_profile .bash_aliases .gitignore_global .composer/composer.json"
 
 if [ "-b" = "$1" ]
 then
@@ -7,7 +8,8 @@ then
     do
         if [ -f ~/$tmpf ]
         then
-            cp -vf ~/$tmpf ~/dotfiles/$tmpf
+            mkdir -p `dirname ~/dotfiles/$tmpf`
+            cp -vrf ~/$tmpf ~/dotfiles/$tmpf
         fi
     done
     ls -lhA ~/dotfiles
@@ -17,7 +19,8 @@ then
     do
         if [ -f ~/dotfiles/$tmpf ]
         then
-            cp -vf ~/dotfiles/$tmpf ~/$tmpf
+            mkdir -p `dirname ~/$tmpf`
+            cp -vrf ~/dotfiles/$tmpf ~/$tmpf
         fi
     done
     ls -lhA ~
