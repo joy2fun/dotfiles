@@ -1,2 +1,0 @@
-
-wwwroot='/opt/lampp/htdocs'

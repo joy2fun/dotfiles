@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ~
-watched_files=".zshrc .bashrc .gitconfig .bash_profile .bash_aliases .gitignore_global .composer/composer.json"
+watched_files=".zshrc .gitconfig .gitignore_global"
 
 for tmpf in $watched_files
 do

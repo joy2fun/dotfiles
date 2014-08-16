@@ -1,5 +1,8 @@
 #!/bin/bash
 
-# ncurses
-sudo apt-get install libncurses5-dev
-sudo apt-get install git
+sudo apt-get install -y libncurses5-dev
+
+sudo apt-get install -y git
+
+sudo apt-get install -y openssh-server
+

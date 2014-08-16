@@ -1,6 +1,0 @@
-{
-    "require-dev":{
-        "phpunit/dbunit": ">=1.2",
-        "phpunit/phpunit": "4.1.*"
-    }
-}
