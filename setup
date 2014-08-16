@@ -1,0 +1,9 @@
+#!/bin/bash
+cd ~
+watched_files=".zshrc .bashrc .gitconfig .bash_profile .bash_aliases .gitignore_global .composer/composer.json"
+
+for tmpf in $watched_files
+do
+    rm -rf ~/$tmpf
+    ln -s ~/dotfiles/$tmpf ~/$tmpf
+done
