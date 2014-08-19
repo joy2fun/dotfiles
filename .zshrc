@@ -88,6 +88,8 @@ alias hist='cat ~/.bash_history | grep '
 alias lh='ls -lhA'
 alias lll='ls -lhAt | head -20'
 
+alias vim='vim -u ~/.vim/vimrc'
+
 # lampp
 lampp=/opt/lampp/lampp
 alias www='cd /opt/lampp/htdocs'

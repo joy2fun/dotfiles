@@ -18,3 +18,5 @@ mkdir .vim
 cd .vim
 
 sudo git clone --recursive https://github.com/joy2fun/vimfiles.git .
+
+sudo chown chiao:chiao -R ~
