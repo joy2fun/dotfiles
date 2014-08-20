@@ -101,6 +101,8 @@ alias relampp='sudo $lampp restart'
 mongopath=/opt/mongodb/bin
 alias mgo='sudo $mongopath/mongo';
 alias mgod='sudo $mongopath/mongod';
+
+#pdt
 alias pdt='sudo ~/zend-eclipse-php/zend-eclipse-php'
 #}}}
 
