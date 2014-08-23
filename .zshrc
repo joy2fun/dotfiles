@@ -6,8 +6,8 @@ DEFAULT_USER="chiao"
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.agnoster  robbyrussell
-#ZSH_THEME="amuse"
-ZSH_THEME="agnoster"
+ZSH_THEME="amuse"
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -88,7 +88,8 @@ alias hist='cat ~/.bash_history | grep '
 alias lh='ls -lhA'
 alias lll='ls -lhAt | head -20'
 
-alias vim='vim -u ~/.vim/vimrc'
+alias v='vim -u ~/.vim/vimrc'
+alias gpom='sudo git push origin master'
 
 # lampp
 lampp=/opt/lampp/lampp

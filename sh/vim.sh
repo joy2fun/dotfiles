@@ -52,3 +52,13 @@ case $installvim in
 
     ;;
 esac
+
+sleep 1
+read -p "Do you need vimfiles?[y/N]" needvimfiles
+case $needvimfiles in
+    [yY]* )
+        rm -rf ~/.vim
+        sudo clone --recursive git@github.com:joy2fun/vimfiles.git ~/.vim
+
+        ;;
+esac
