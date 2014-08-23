@@ -88,7 +88,7 @@ case $needomz in
 esac
 
 # dot files
-read -p "Do you need oh-my-zsh?[y/N]" needdotfiles
+read -p "Do you need dotfiles?[y/N]" needdotfiles
 case $needdotfiles in
   [Yy]* )
     sudo git clone git://github.com/joy2fun/dotfiles.git $myhome/dotfiles
@@ -97,6 +97,6 @@ case $needdotfiles in
 esac
 
 if [ -n "$username" ];then
-    echo "change ownship to $username."
+    echo "change ownership to $username."
     sudo chown $username:$username -R $myhome
 fi
