@@ -1,9 +1,0 @@
-#!/bin/bash
-cd ~
-watched_files=".zshrc .gitconfig .gitignore_global"
-
-for tmpf in $watched_files
-do
-    rm -rf ~/$tmpf
-    ln -s ~/dotfiles/$tmpf ~/$tmpf
-done

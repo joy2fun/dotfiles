@@ -18,6 +18,10 @@ then
         sudo passwd $username
         sudo sed -i "/^root/a\%$username\tALL=(ALL)\tALL" /etc/sudoers
     fi
+
+    if [ ! -d "$myhome" ]; then
+        sudo mkdir $myhome
+    fi
 else
     echo "No user will be added."
     echo ""
@@ -31,11 +35,11 @@ command_exists(){
 }
 
 # install ncurses & fontconfig
-if command_exists $yum; then
+if command_exists $aptget; then
+    sudo apt-get install -y libncurses5-dev
+elif command_exists $yum; then
     sudo yum install -y ncurses-devel
     sudo yum install -y fontconfig
-elif command_exists $aptget; then
-    apt-get install -y libncurses5-dev
 fi
 
 # install git
@@ -55,6 +59,7 @@ else
     echo "git has been installed."
 fi
 
+sleep 1
 # install zsh
 if ! command_exists zsh ; then
     zshgz="zsh.tar.gz"
@@ -73,10 +78,11 @@ else
 fi
 
 if [ ! -d "$myhome/temp" ];then
-    sudo mkdir temp
+    sudo mkdir $myhome/temp
 fi
 cd $myhome/temp
 
+sleep 1
 # install oh-my-zsh
 read -p "Do you need oh-my-zsh?[y/N]" needomz
 case $needomz in
@@ -87,12 +93,15 @@ case $needomz in
     ;;
 esac
 
+sleep 1
 # dot files
 read -p "Do you need dotfiles?[y/N]" needdotfiles
 case $needdotfiles in
   [Yy]* )
     sudo git clone git://github.com/joy2fun/dotfiles.git $myhome/dotfiles
     sudo sed -i "s/chiao/$username/g" $myhome/dotfiles/.zshrc
+    sudo $myhome/dotfiles/setup.sh
+
     ;;
 esac
 
