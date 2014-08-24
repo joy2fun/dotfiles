@@ -25,7 +25,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -75,21 +75,16 @@ export PATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/h
 #. ~/powerline/powerline/bindings/zsh/powerline.zsh
 
 # alias {{{
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hist='cat ~/.bash_history | grep '
 # list
 alias lh='ls -lhA'
 alias lll='ls -lhAt | head -20'
 
 alias v='vim -u ~/.vim/vimrc'
-alias gpom='sudo git push origin master'
+alias gpom='git push origin master'
+
+# phptag
+alias phptag='ctags --fields=+aimS --languages=php'
 
 # lampp
 lampp=/opt/lampp/lampp

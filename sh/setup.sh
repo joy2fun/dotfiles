@@ -36,10 +36,11 @@ command_exists(){
 
 # install ncurses & fontconfig
 if command_exists $aptget; then
-    sudo apt-get install -y libncurses5-dev
+    for packages in libncurses5-dev curl-devel;
+    do sudo apt-get install -y $packages; done
 elif command_exists $yum; then
-    sudo yum install -y ncurses-devel
-    sudo yum install -y fontconfig
+    for packages in ncurses-devel fontconfig curl-devel;
+    do sudo yum install -y $packages; done
 fi
 
 # install git

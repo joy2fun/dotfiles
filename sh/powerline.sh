@@ -1,7 +1,9 @@
 #!/bin/sh
-cd ~
-mkdir -p .fonts
-cd .fonts
+
+if [ ! -d ~/.fonts ]; then
+    mkdir ~/.fonts
+fi
+cd ~/.fonts
 
 wget --no-check-certificate https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
 wget --no-check-certificate https://gist.github.com/qrush/1595572/raw/51bdd743cc1cc551c49457fe1503061b9404183f/Inconsolata-dz-Powerline.otf
