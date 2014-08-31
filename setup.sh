@@ -1,5 +1,6 @@
 #!/bin/bash
-currenthome=$(dirname $0)
+currenthome=$(readlink -f "$0")
+currenthome=$(dirname $currenthome)
 currenthome=${currenthome%/*}
 cd $currenthome
 
