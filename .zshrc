@@ -83,6 +83,8 @@ alias lll='ls -lhAt | head -20'
 alias v='vim -u ~/.vim/vimrc'
 alias gpom='git push origin master'
 
+alias skg='ssh-keygen'
+
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
 

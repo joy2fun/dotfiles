@@ -12,6 +12,8 @@
     re = remote
     st = status
     ci = commit
+    am = commit --amend --reuse-message=HEAD
+    cl = clone --recursive
     last = log -1 HEAD
     unstage = reset HEAD --
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
@@ -23,3 +25,11 @@
     keepBackup = false
 [mergetool "fugitive"]
     cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[url "git@github.com:"]
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
+[url "https://git.oschina.net/"]
+    insteadOf = "osc//"
+[url "git@git.oschina.net:"]
+    insteadOf = "osc:"
