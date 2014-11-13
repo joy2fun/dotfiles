@@ -74,36 +74,9 @@ export PATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/h
 
 #. ~/powerline/powerline/bindings/zsh/powerline.zsh
 
-# alias {{{
-alias hist='cat ~/.bash_history | grep '
-# list
-alias lh='ls -lhA'
-alias lll='ls -lhAt | head -20'
-
-alias v='vim -u ~/.vim/vimrc'
-alias gpom='git push origin master'
-
-alias skg='ssh-keygen'
-
-# phptag
-alias phptag='ctags --fields=+aimS --languages=php'
-
-# lampp
-lampp=/opt/lampp/lampp
-alias www='cd /opt/lampp/htdocs'
-alias lampp='sudo $lampp start'
-alias lamppstop='sudo $lampp stop'
-alias relampp='sudo $lampp restart'
-
-#mongodb
-mongopath=/opt/mongodb/bin
-alias mgo='sudo $mongopath/mongo';
-alias mgod='sudo $mongopath/mongod';
-
-#pdt
-alias pdt='sudo ~/zend-eclipse-php/zend-eclipse-php'
-#}}}
-
 test -f ~/dotfiles/libs/common.sh && {
     . ~/dotfiles/libs/common.sh
 }
+
+. ~/dotfiles/libs/alias.sh
+

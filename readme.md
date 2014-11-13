@@ -11,3 +11,4 @@ chmod +x setup.sh
 - setup zsh
 - clone oh-my-zsh
 - clone dotfiles
+- setup vimfiles
