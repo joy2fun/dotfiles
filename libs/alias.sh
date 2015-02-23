@@ -1,6 +1,5 @@
 #!/bin/echo Warning: this file should be sourced
 
-# alias {{{
 alias hist='cat ~/.zsh_history | grep '
 # list
 alias lh='ls -lhA'
@@ -29,6 +28,9 @@ alias mgod='sudo $mongopath/mongod'
 #pdt
 alias pdt='sudo ~/zend-eclipse-php/zend-eclipse-php'
 #}}}
+
+#ssh
+alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 
 iscmd apt-get && {
     alias agi='sudo apt-get install '
