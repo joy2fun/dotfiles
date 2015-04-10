@@ -58,7 +58,7 @@ read -p "Do you need vimfiles?[y/N]" needvimfiles
 case $needvimfiles in
     [yY]* )
         rm -rf ~/.vim
-        git clone --recursive git@github.com:joy2fun/vimfiles.git ~/.vim
+        git clone --recursive https://github.com/joy2fun/vimfiles.git ~/.vim
 
         ;;
 esac
