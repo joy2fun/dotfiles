@@ -6,6 +6,7 @@ alias lh='ls -lhA'
 alias lll='ls -lhAt | head -20'
 
 alias v='vim -u ~/.vim/vimrc'
+alias vv='sudo vim -u ~/.vim/vimrc'
 alias gpom='git push origin master'
 
 alias skg='ssh-keygen'
