@@ -1,5 +1,9 @@
 #!/bin/echo Warning: this file should be sourced
 
+alias df='df -h'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+alias psg='ps aux|grep '
 alias hist='cat ~/.zsh_history | grep '
 # list
 alias lh='ls -lhA'
