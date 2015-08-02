@@ -36,7 +36,7 @@ command_exists(){
 
 # install ncurses & fontconfig
 if command_exists $aptget; then
-    for packages in make libncurses5-dev libcurl-dev apache2-utils;
+    for packages in gcc make zsh libncurses5-dev libcurl-dev apache2-utils;
     do sudo apt-get install -y $packages; done
 elif command_exists $yum; then
     for packages in ncurses-devel fontconfig curl-devel;
@@ -71,8 +71,8 @@ if ! command_exists zsh ; then
     tar zxvf zsh.tar.gz
     cd zsh-*
 
-    sudo ./configure
-    sudo make
+    ./configure
+    make
     sudo make install
 else
     echo "zsh has been installed."
@@ -89,8 +89,8 @@ read -p "Do you need oh-my-zsh?[y/N]" needomz
 case $needomz in
   [Yy]* )
     sudo git clone git://github.com/robbyrussell/oh-my-zsh.git $myhome/.oh-my-zsh
-    sudo usermod -s /usr/local/bin/zsh $username
-
+    zshbin=$(which zsh)
+    sudo usermod -s $zshbin $username
     ;;
 esac
 
