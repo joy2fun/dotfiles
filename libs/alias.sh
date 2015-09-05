@@ -3,6 +3,7 @@
 alias df='df -h'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
+alias lnmp='sudo lnmp'
 alias psg='ps aux|grep '
 alias hist='cat ~/.zsh_history | grep '
 # list
@@ -19,11 +20,7 @@ alias skg='ssh-keygen'
 alias phptag='ctags --fields=+aimS --languages=php'
 
 # lampp
-lampp=/opt/lampp/lampp
-alias www='cd /opt/lampp/htdocs'
-alias lampp='sudo $lampp start'
-alias lamppstop='sudo $lampp stop'
-alias relampp='sudo $lampp restart'
+alias lampp='sudo /opt/lampp/lampp'
 
 #mongodb
 mongopath=/opt/mongodb/bin
