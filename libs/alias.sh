@@ -4,17 +4,20 @@ alias df='df -h'
 alias reboot='sudo reboot'
 alias poweroff='sudo poweroff'
 alias lnmp='sudo lnmp'
+alias tcpdump='sudo tcpdump'
+
+alias tarxz='tar Jxvf'
+alias tarbz='tar jxvf'
+alias targz='tar zxvf'
+
 alias psg='ps aux|grep '
 alias hist='cat ~/.zsh_history | grep '
 # list
 alias lh='ls -lhA'
-alias lll='ls -lhAt | head -20'
 
 alias v='vim -u ~/.vim/vimrc'
 alias vv='sudo vim -u ~/.vim/vimrc'
 alias gpom='git push origin master'
-
-alias skg='ssh-keygen'
 
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
@@ -26,9 +29,6 @@ alias lampp='sudo /opt/lampp/lampp'
 mongopath=/opt/mongodb/bin
 alias mgo='sudo $mongopath/mongo'
 alias mgod='sudo $mongopath/mongod'
-
-#pdt
-alias pdt='sudo ~/zend-eclipse-php/zend-eclipse-php'
 #}}}
 
 #ssh
