@@ -7,9 +7,13 @@
     re = remote
     st = status
     ci = commit
+    am = commit --amend --reuse-message=HEAD
+    cl = clone --recursive
+    me = merge --no-ff
     last = log -1 HEAD
     unstage = reset HEAD --
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    stoptrack = update-index --assume-unchanged 
 [core]
     autocrlf = true
 [merge]
@@ -18,4 +22,4 @@
     prompt = false
     keepBackup = false
 [mergetool "gvim"]
-    cmd = gvim -f -c \"Gdiff\" \"$MERGED\"
+    cmd = vim -f -c \"Gdiff\" \"$MERGED\"
