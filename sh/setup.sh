@@ -36,7 +36,7 @@ command_exists(){
 
 # install ncurses & fontconfig
 if command_exists $aptget; then
-    for packages in gcc make zsh libncurses5-dev libcurl-dev apache2-utils;
+    for packages in gcc make zsh libc6-dbg gdb libncurses5-dev libcurl-dev apache2-utils lrzsz;
     do sudo apt-get install -y $packages; done
 elif command_exists $yum; then
     for packages in ncurses-devel fontconfig curl-devel;
