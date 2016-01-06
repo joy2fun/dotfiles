@@ -17,7 +17,9 @@ alias lh='ls -lhA'
 
 alias v='vim -u ~/.vim/vimrc'
 alias vv='sudo vim -u ~/.vim/vimrc'
-alias gpom='git push origin master'
+alias gpo='git push origin'
+
+alias mc='valgrind --tool=memcheck'
 
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
@@ -29,7 +31,6 @@ alias lampp='sudo /opt/lampp/lampp'
 mongopath=/opt/mongodb/bin
 alias mgo='sudo $mongopath/mongo'
 alias mgod='sudo $mongopath/mongod'
-#}}}
 
 #ssh
 alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
