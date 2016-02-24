@@ -37,3 +37,5 @@
     insteadOf = "osc:"
 [github]
     user = joy2fun
+[color]
+	ui = true
