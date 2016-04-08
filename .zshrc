@@ -72,11 +72,14 @@ export PATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/h
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#. ~/powerline/powerline/bindings/zsh/powerline.zsh
-
 test -f ~/dotfiles/libs/common.sh && {
     . ~/dotfiles/libs/common.sh
 }
 
 . ~/dotfiles/libs/alias.sh
 
+if iscmd "powerline"; then
+    test -f ~/dotfiles/sh/powerline.zsh && {
+        . ~/dotfiles/sh/powerline.zsh
+    }
+fi
