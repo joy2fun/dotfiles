@@ -1,13 +1,12 @@
 #!/bin/bash
-currenthome=$(readlink -f "$0")
-currenthome=$(dirname $currenthome)
-currenthome=${currenthome%/*}
-cd $currenthome
+echo "trying to create symlinks..."
+cd $HOME
 
 watched_files=".zshrc .gitconfig .gitignore_global"
 
 for tmpf in $watched_files
 do
-    rm -rf $currenthome/$tmpf
-    ln -s $currenthome/dotfiles/$tmpf $currenthome/$tmpf
+    rm -rf $HOME/$tmpf
+    echo "ln -s ~/dotfiles/$tmpf ~/$tmpf"
+    ln -s $HOME/dotfiles/$tmpf $HOME/$tmpf
 done
