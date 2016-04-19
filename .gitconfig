@@ -18,7 +18,7 @@
     unstage = reset HEAD --
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     stoptrack = update-index --assume-unchanged 
-    subpull = git submodule update --init --recursive
+    subpull = submodule update --init --recursive
 [push]
     default = matching
 [merge]
