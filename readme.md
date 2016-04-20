@@ -12,3 +12,4 @@ chmod +x setup.sh
 - clone oh-my-zsh
 - clone dotfiles
 - setup vimfiles
+- setup powerline
