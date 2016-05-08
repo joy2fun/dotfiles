@@ -25,6 +25,7 @@ alias mc='valgrind --tool=memcheck'
 alias phptag='ctags --fields=+aimS --languages=php'
 alias php56='~/php56/bin/php'
 alias php70='~/php70/bin/php'
+alias phps='php -S 0.0.0.0:9080 -t $(pwd)'
 
 # lampp
 alias lampp='sudo /opt/lampp/lampp'
