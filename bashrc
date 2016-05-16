@@ -17,9 +17,9 @@ alias gst='git status'
 alias phps='php -S 0.0.0.0:9080'
 
 # github
-alias mygh='explorer http://github.com/joy2fun'
+alias mygh='start http://github.com/joy2fun'
 
 # search
-alias b='explorer http://cn.bing.com/search?q='
-alias ghs='explorer https://github.com/search?q='
-alias phppkg='explorer https://packagist.org/search/?q='
+alias b='start http://cn.bing.com/search?q='
+alias ghs='start https://github.com/search?q='
+alias phppkg='start https://packagist.org/search/?q='
