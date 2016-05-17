@@ -3,6 +3,8 @@
 # for Git bash on Windows
 
 alias bashrc='vi ~/.bashrc'
+alias bashrc-download='curl -o ~/.bashrc https://raw.githubusercontent.com/joy2fun/dotfiles/master/bashrc'
+alias bashrc-upload='start https://github.com/joy2fun/dotfiles/edit/master/bashrc'
 
 alias ll='ls -lh'
 alias lh='ls -lhA'
