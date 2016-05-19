@@ -9,7 +9,8 @@ DEFAULT_USER="chiao"
 ZSH_THEME="amuse"
 ZSH_THEME="sorin"
 ZSH_THEME="ys"
-#ZSH_THEME="agnoster"
+ZSH_THEME="agnoster"
+ZSH_THEME="jreese"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -82,6 +83,6 @@ test -f ~/dotfiles/libs/common.sh && {
 
 if iscmd "powerline"; then
     test -f ~/dotfiles/sh/powerline.zsh && {
-        . ~/dotfiles/sh/powerline.zsh
+        #. ~/dotfiles/sh/powerline.zsh
     }
 fi
