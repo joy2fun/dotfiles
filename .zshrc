@@ -7,6 +7,8 @@ DEFAULT_USER="chiao"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.agnoster  robbyrussell
 ZSH_THEME="amuse"
+ZSH_THEME="sorin"
+ZSH_THEME="ys"
 #ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
