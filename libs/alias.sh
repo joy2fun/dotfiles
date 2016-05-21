@@ -39,7 +39,12 @@ alias mgod='sudo $mongopath/mongod'
 #ssh
 alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 
-iscmd apt-get && {
-    alias agi='sudo apt-get install '
-    alias acs='apt-cache search '
-}
+if [ $(uname -s) = "Darwin" ] ; then
+    alias b='open http://cn.bing.com/'
+    alias gh='open https://github.com/'
+else
+    iscmd apt-get && {
+        alias agi='sudo apt-get install '
+        alias acs='apt-cache search '
+    }
+fi
