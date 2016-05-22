@@ -57,11 +57,12 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 if [ "$(uname -s)" = "Darwin" ] ; then
-    export PATH="/Users/chiao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    MAINPATH="/Users/chiao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 else
-    export PATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/home/chiao/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    MAINPATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/home/chiao/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 fi
-# export MANPATH="/usr/local/man:$MANPATH"
+
+export PATH=~/php56/bin:$MAINPATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

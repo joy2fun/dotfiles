@@ -16,22 +16,22 @@
     </vkopenurldef>
 
     <item>
-        <name>COMMAND_L x2 to launch spotlight.</name>
+        <name>COMMAND_L x2 to launch Terminal.</name>
         <identifier>private.command_l_x2</identifier>
         <autogen>
             __DoublePressModifier__
             KeyCode::COMMAND_L, KeyCode::COMMAND_L,
-            KeyCode::SPACE, ModifierFlag::COMMAND_L
+            KeyCode::VK_OPEN_URL_APP_Terminal,
         </autogen>
     </item>
 
     <item>
-        <name>COMMAND_R x2 to launch Terminal.</name>
+        <name>COMMAND_R x2 to toggle full screen.</name>
         <identifier>private.command_r_x2</identifier>
         <autogen>
             __DoublePressModifier__
             KeyCode::COMMAND_R, KeyCode::COMMAND_R,
-            KeyCode::VK_OPEN_URL_APP_Terminal,
+            KeyCode::F, ModifierFlag::COMMAND_L|ModifierFlag::CONTROL_L
         </autogen>
     </item>
 

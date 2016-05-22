@@ -27,3 +27,14 @@ isalive(){
         return 0
     fi
 }
+
+# switch php version
+usephp(){
+    VER="${1:-56}"
+    if [ -d "$HOME/php$VER" ]; then
+        export PATH=~/php$VER/bin:$MAINPATH
+        which php
+    else
+        echo "$HOME/php$VER is not a directory."
+    fi
+}
