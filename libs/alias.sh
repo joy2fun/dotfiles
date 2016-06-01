@@ -6,9 +6,9 @@ alias poweroff='sudo poweroff'
 alias lnmp='sudo lnmp'
 alias tcpdump='sudo tcpdump'
 
-alias tarxz='tar Jxvf'
-alias tarbz='tar jxvf'
-alias targz='tar zxvf'
+alias tarxz='tar Jxf'
+alias tarbz='tar jxf'
+alias targz='tar zxf'
 
 alias psg='ps aux|grep '
 alias hist='cat ~/.zsh_history | grep '
@@ -23,18 +23,12 @@ alias mc='valgrind --tool=memcheck'
 
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
+
 alias php56='~/php56/bin/php'
 alias php70='~/php70/bin/php'
 alias phps='php -S 0.0.0.0:9080'
-alias comp='php -n ~/bin/composer'
-
-# lampp
-alias lampp='sudo /opt/lampp/lampp'
-
-#mongodb
-mongopath=/opt/mongodb/bin
-alias mgo='sudo $mongopath/mongo'
-alias mgod='sudo $mongopath/mongod'
+alias c='php -n ~/bin/composer'
+alias composer='php -n ~/bin/composer'
 
 #ssh
 alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
