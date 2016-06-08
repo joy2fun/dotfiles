@@ -13,6 +13,7 @@ alias e='explorer'
 alias v='gvim'
 
 # git
+alias g='git'
 alias gpo='git push origin'
 alias gst='git status'
 
