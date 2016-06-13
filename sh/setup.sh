@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 myhome=~
 
 # add user

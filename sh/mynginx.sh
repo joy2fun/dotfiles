@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 NAME="${2:-nginx}"
