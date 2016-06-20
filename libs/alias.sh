@@ -36,6 +36,7 @@ alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 if [ $(uname -s) = "Darwin" ] ; then
     alias b='open http://cn.bing.com/'
     alias gh='open https://github.com/'
+    alias java='/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
 else
     iscmd apt-get && {
         alias agi='sudo apt-get install '
