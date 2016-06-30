@@ -1,23 +1,11 @@
 #!/bin/echo Warning: this file should be sourced
 
-# for Git bash on Windows
-
-alias bashrc='vi ~/.bashrc'
-alias bashrc-download='curl -o ~/.bashrc https://raw.githubusercontent.com/joy2fun/dotfiles/master/bashrc'
-alias bashrc-upload='start https://github.com/joy2fun/dotfiles/edit/master/bashrc'
-
-alias ll='ls -lh'
-alias lh='ls -lhA'
+[ -f ~/dotfiles/libs/alias.sh ] && {
+    . ~/dotfiles/libs/alias.sh
+}
 
 alias e='explorer'
 alias v='gvim'
-
-# git
-alias g='git'
-alias gpo='git push origin'
-alias gst='git status'
-
-alias phps='php -S 0.0.0.0:9080'
 
 # github
 alias mygh='start http://github.com/joy2fun'
