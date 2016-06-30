@@ -43,3 +43,7 @@ else
         alias acs='apt-cache search '
     }
 fi
+
+alias cpmakefile='cp ~/dotfiles/Makefile ./'
+alias cs='~/dotfiles/bin/code-snippet.sh'
+

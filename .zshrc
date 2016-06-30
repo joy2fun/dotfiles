@@ -57,9 +57,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 if [ "$(uname -s)" = "Darwin" ] ; then
-    MAINPATH="/Users/chiao/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    MAINPATH="/Users/chiao/bin:/Users/chiao/dotfiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 else
-    MAINPATH="/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/opt/mongodb/bin:/home/chiao/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    MAINPATH="/home/chiao/bin:/home/chiao/dotfiles/bin:/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 fi
 
 export PATH=~/php56/bin:$MAINPATH
