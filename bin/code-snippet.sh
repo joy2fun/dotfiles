@@ -1,15 +1,22 @@
-#!/bin/bash
+#!/bin/sh
 
-csurl="git@git.oschina.net:home5u/code-snippets.git"
-cspath=~/code-snippets
+#-------- configuration begin --------
+
+csgit="git@git.oschina.net:home5u/code-snippets.git"
+csprefix="https://git.oschina.net/home5u/code-snippets/blob/master"
+cspath=~/code-snippets/
+
+#-------- configuration end --------
 
 cmd=${1}
 path=${2}
 
 cwd=$(pwd)
-helpmsg="Usage: $0 {get|add|delete} {path}"
+helpmsg="Usage: $0 {get|add|delete|view} {path}"
 gitquiet="--quiet"
 gitbin=$(which git)
+cpbin=$(which cp)
+rmbin=$(which rm)
 
 [ -z "$cmd" ] && {
     echo $helpmsg
@@ -17,17 +24,23 @@ gitbin=$(which git)
 }
 
 [ ! -d "$cspath" ] && {
-    $gitbin clone $csurl $cspath $gitquiet
+    $gitbin clone $csgit $cspath $gitquiet
 }
 
-[ -d "$cspath" ] && {
-    cd $cspath
-    [ ! -d "$cspath/.git" ] && {
-        echo "[$cspath] is not a git dir."
-        exit 1
+git_clean(){
+    $gitbin clean -n -d -f $gitquiet $gitquiet >/dev/null 2>&1
+}
+
+git_update(){
+    [ -d "$cspath" ] && {
+        cd $cspath
+        [ ! -d "$cspath/.git" ] && {
+            echo "[$cspath] is not a git dir."
+            exit 1
+        }
+        git_clean
+        $gitbin pull origin master $gitquiet >/dev/null
     }
-    $gitbin clean -n -d -f $gitquiet $gitquiet
-    $gitbin pull origin master $gitquiet >/dev/null
 }
 
 case $cmd in
@@ -37,10 +50,12 @@ case $cmd in
             exit 1
         }
 
+        git_update
+
         if [ -f "$cspath/$path" ] ; then
             cat "$cspath/$path"
         elif [ -d "$cspath/$path" ] ; then
-            cp -i -r "$cspath/$path" -t "$cwd"
+            $cpbin -i -r "$cspath/$path" -t "$cwd"
         else
             echo "Remote not Found!"
             exit 1
@@ -50,7 +65,8 @@ case $cmd in
 
     add )
         if [ -e "$cwd/$path" ] ; then
-            cp -rf "$cwd/$path" "$cspath"
+            git_update
+            $cpbin -rf "$cwd/$path" "$cspath"
         else
             echo "invalid path."
             exit 1
@@ -63,11 +79,24 @@ case $cmd in
 
     delete )
         [ -e "$cspath/$path" ] && {
-            rm -rf "$cspath/$path"
+            git_update
+            $rmbin -rf "$cspath/$path"
             $gitbin commit -a -m "ignore" $gitquiet >/dev/null
             $gitbin push origin master $gitquiet
         }
+    ;;
 
+    view )
+        link="$csprefix/$path"
+        echo "Visit: "
+        echo $link
+
+        [ $(uname -s) = "Darwin" ] && {
+            open $link
+            exit 0
+        }
+
+        start $link >/dev/null 2>&1
     ;;
 
     * )
@@ -75,3 +104,4 @@ case $cmd in
         echo $helpmsg
         exit 1
 esac
+
