@@ -64,9 +64,9 @@ case $cmd in
     ;;
 
     add )
-        if [ -e "$cwd/$path" ] ; then
+        if [ -e "$path" ] ; then
             git_update
-            $cpbin -rf "$cwd/$path" "$cspath"
+            $cpbin -rf "$path" "$cspath"
         else
             echo "invalid path."
             exit 1
