@@ -7,7 +7,7 @@
 
     <vkopenurldef>
         <name>KeyCode::VK_OPEN_URL_APP_Terminal</name>
-        <url type="file">/Applications/Utilities/Terminal.app</url>
+        <url type="file">/Applications/iTerm.app</url>
     </vkopenurldef>
 
     <vkopenurldef>
@@ -21,7 +21,7 @@
         <autogen>
             __DoublePressModifier__
             KeyCode::COMMAND_L, KeyCode::COMMAND_L,
-            KeyCode::VK_OPEN_URL_APP_Terminal,
+            KeyCode::VK_OPEN_URL_APP_Terminal
         </autogen>
     </item>
 
@@ -41,7 +41,17 @@
         <autogen>
             __DoublePressModifier__
             KeyCode::OPTION_L, KeyCode::OPTION_L,
-            KeyCode::VK_OPEN_URL_APP_Safari,
+            KeyCode::VK_OPEN_URL_APP_Safari
+        </autogen>
+    </item>
+
+    <item>
+        <name>OPTION_R x2 to launch Safari.</name>
+        <identifier>private.option_r_x2</identifier>
+        <autogen>
+            __DoublePressModifier__
+            KeyCode::OPTION_R, KeyCode::OPTION_R,
+            KeyCode::VK_OPEN_URL_APP_Safari
         </autogen>
     </item>
 
