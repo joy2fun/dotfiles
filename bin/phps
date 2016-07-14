@@ -1,0 +1,5 @@
+#!/bin/bash
+port="${1:-9080}"
+echo "Server : 0.0.0.0:$port"
+php -S 0.0.0.0:$port
+
