@@ -101,7 +101,7 @@ case $needdotfiles in
   [Yy]* )
     sudo git clone git://github.com/joy2fun/dotfiles.git $myhome/dotfiles
     sudo sed -i "s/chiao/$username/g" $myhome/dotfiles/.zshrc
-    sudo $myhome/dotfiles/setup.sh
+    sudo $myhome/dotfiles/setup.sh $myhome
 
     ;;
 esac
