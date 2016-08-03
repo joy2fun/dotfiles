@@ -23,6 +23,7 @@ then
         sudo mkdir $myhome
     fi
 else
+    username=$USER
     echo "No user will be added."
     echo ""
 fi
