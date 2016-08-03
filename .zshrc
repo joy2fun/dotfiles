@@ -8,9 +8,9 @@ DEFAULT_USER="chiao"
 # time that oh-my-zsh is loaded.agnoster  robbyrussell
 ZSH_THEME="amuse"
 ZSH_THEME="sorin"
-ZSH_THEME="ys"
 ZSH_THEME="agnoster"
 ZSH_THEME="jreese"
+ZSH_THEME="ys"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
