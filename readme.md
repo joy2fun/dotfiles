@@ -1,9 +1,7 @@
 Usage
 ========
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/joy2fun/dotfiles/master/sh/setup.sh
-chmod +x setup.sh
-./setup.sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/joy2fun/dotfiles/master/sh/setup.sh)"
 ```
 
 - setup login
