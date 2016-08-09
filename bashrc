@@ -5,7 +5,6 @@
 }
 
 alias e='explorer'
-alias v='gvim'
 
 # github
 alias mygh='start http://github.com/joy2fun'

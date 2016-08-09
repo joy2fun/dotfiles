@@ -13,8 +13,13 @@ alias targz='tar zxf'
 alias psg='ps aux|grep '
 alias hist='cat ~/.zsh_history | grep '
 
-alias v='vim -u ~/.vim/vimrc'
-alias vv='sudo vim -u ~/.vim/vimrc'
+if [ -d ~/vimfiles ]; then
+    alias v='vim -u ~/vimfiles/vimrc'
+    alias vv='vim -u ~/vimfiles/vimrc'
+else
+    alias v='vim -u ~/.vim/vimrc'
+    alias vv='sudo vim -u ~/.vim/vimrc'
+fi
 
 alias mc='valgrind --tool=memcheck'
 
