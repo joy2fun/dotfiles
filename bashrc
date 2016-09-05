@@ -6,6 +6,11 @@
 
 alias e='explorer'
 
+# winpty output is not a tty
+alias p='php'
+alias php='php'
+unalias php
+
 # github
 alias mygh='start http://github.com/joy2fun'
 
