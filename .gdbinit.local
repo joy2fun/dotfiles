@@ -1,0 +1,23 @@
+
+set $SHOWCPUREGISTERS = 0
+set $COLOREDPROMPT = 0
+set $SKIPEXECUTE = 1
+
+set print pretty on
+set breakpoint pending on
+
+define nn
+    if $argc == 0
+        next
+    end
+    if $argc == 1
+        next $arg0
+    end
+    if $argc > 1
+        help nn
+    end
+end
+document nn
+Syntax: nn <NUM>
+    Next line(s).
+end
