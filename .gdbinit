@@ -449,13 +449,13 @@ Syntax: stack <COUNT>
 end
 
 
-define frame
+define framei
     info frame
     info args
     info locals
 end
-document frame
-Syntax: frame
+document framei
+Syntax: framei
 | Print stack frame.
 end
 
