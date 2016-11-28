@@ -66,7 +66,7 @@ else
     MAINPATH="/home/chiao/bin:/home/chiao/dotfiles/bin:/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 fi
 
-export PATH=~/php56/bin:$MAINPATH
+export PATH=$MAINPATH
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -86,6 +86,10 @@ export PATH=~/php56/bin:$MAINPATH
 
 test -f ~/dotfiles/libs/common.sh && {
     . ~/dotfiles/libs/common.sh
+}
+
+test -f ~/dotfiles/.zshrc.local && {
+    . ~/dotfiles/.zshrc.local
 }
 
 . ~/dotfiles/libs/alias.sh
