@@ -1,10 +1,7 @@
 # vim: fdm=marker
-# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-DEFAULT_USER="chiao"
 
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+DEFAULT_USER="vagrant"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -59,13 +56,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-if [ "$(uname -s)" = "Darwin" ] ; then
-    MAINPATH="/Users/chiao/bin:/Users/chiao/dotfiles/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-else
-    MAINPATH="/home/chiao/bin:/home/chiao/dotfiles/bin:/home/chiao/.composer/vendor/bin:/opt/lampp/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-fi
-
+MAINPATH="${HOME}/bin:${HOME}/dotfiles/bin:${HOME}/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH=$MAINPATH
 
 # You may need to manually set your language environment
@@ -88,10 +79,6 @@ test -f ~/dotfiles/libs/common.sh && {
     . ~/dotfiles/libs/common.sh
 }
 
-test -f ~/dotfiles/.zshrc.local && {
-    . ~/dotfiles/.zshrc.local
-}
-
 . ~/dotfiles/libs/alias.sh
 
 if iscmd "powerline"; then
@@ -99,3 +86,11 @@ if iscmd "powerline"; then
         #. ~/dotfiles/sh/powerline.zsh
     }
 fi
+
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+test -f ~/dotfiles/.zshrc.local && {
+    . ~/dotfiles/.zshrc.local
+}
+
