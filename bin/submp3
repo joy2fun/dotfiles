@@ -1,0 +1,64 @@
+#!/bin/bash
+
+start=0
+end=0
+file=
+out=
+
+ms2sec (){
+    local secs=0
+    local min=${1%:*}
+    local sec=${1#*:}
+    (( secs=${min##0}*60 + ${sec##0} ))
+    echo $secs
+}
+
+while getopts ":h :s: :e: :f: :o:" opt; do
+    case $opt in
+        h)
+            echo "Options:"
+            echo ""
+            echo "    -f     Input file"
+            echo "    -o     Output file, Optional. Default name: {INPUT-FILE}-chopped.mp3"
+            echo "    -s     Start time (mm:ss), WHITOUT hour"
+            echo "    -e     End time (mm:ss)"
+            echo ""
+            exit 0
+            ;;
+        s)
+            start=$(ms2sec $OPTARG)
+            ;;
+        e)
+            end=$(ms2sec $OPTARG)
+            ;;
+        f)
+            file=$OPTARG
+            out="${file%.mp3}-chopped.mp3"
+            ;;
+        o)
+            out=$OPTARG
+            ;;
+    esac
+done
+
+if [ ! -f "$file" ]; then
+    echo "Missing file: $file"
+    exit 1
+fi
+
+if (( $start >= $end )); then
+    echo "-s must less than -e"
+    exit 1
+fi
+
+tmp=/tmp/_tmp.mp4
+tmp2=/tmp/_tmp2.mp4
+mp4box -add ${file}#audio $tmp
+if [ -f "$tmp2" ]; then
+    mp4box -split-chunk ${start}:${end} $tmp -out $tmp2
+fi
+if [ -f "$tmp2" ]; then
+    mp4box -raw 1 $tmp2 -out ${out}
+fi
+rm -rf $tmp $tmp2 >/dev/null 2>&1
+
