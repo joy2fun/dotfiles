@@ -55,6 +55,7 @@ fi
 
 tmp=/tmp/_tmp.mp4
 tmp2=/tmp/_tmp2.mp4
+rm -rf $tmp $tmp2 >/dev/null 2>&1
 mp4box -add ${file}#audio $tmp
 if [ -f "$tmp" ]; then
     mp4box -split-chunk ${start}:${end} $tmp -out $tmp2
