@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# mp3splt will do the trick. http://mp3splt.sourceforge.net/mp3splt_page/home.php
+
 start=0
 end=0
 file=
