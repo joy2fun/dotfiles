@@ -26,9 +26,6 @@ alias mc='valgrind --tool=memcheck'
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
 
-alias c='php -n ~/bin/composer'
-alias composer='php -n ~/bin/composer'
-
 #ssh
 alias nssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no '
 

@@ -56,7 +56,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-MAINPATH="${HOME}/bin:${HOME}/dotfiles/bin:${HOME}/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+MAINPATH=".:${HOME}/bin:${HOME}/dotfiles/bin:${HOME}/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH=$MAINPATH
 
 # You may need to manually set your language environment
