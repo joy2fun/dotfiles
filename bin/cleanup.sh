@@ -9,13 +9,13 @@ rm -f /root/.bash_history
 rm -f ~/.bash_history
 rm -f ~/gdb*.txt
 rm -f ~/*.log
-rm -rf ~/.local/share/composer
-rm -rf ~/.cache/composer
+#rm -rf ~/.local/share/composer
+#rm -rf ~/.cache/composer
 rm -rf ~/.cache/ctrlp
 rm -rf ~/.cscope.vim
 rm -rf ~/.neocomplcache
-rm -rf ~/.npm
-rm -rf ~/.node-gyp
+#rm -rf ~/.npm
+#rm -rf ~/.node-gyp
 rm -rf ~/git
 rm -rf ~/tmp
 rm -rf ~/temp
