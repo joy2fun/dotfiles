@@ -11,7 +11,7 @@ rm -f ~/gdb*.txt
 rm -f ~/*.log
 #rm -rf ~/.local/share/composer
 #rm -rf ~/.cache/composer
-rm -rf ~/.cache/ctrlp
+#rm -rf ~/.cache/ctrlp
 rm -rf ~/.cscope.vim
 rm -rf ~/.neocomplcache
 #rm -rf ~/.npm
