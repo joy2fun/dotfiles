@@ -67,7 +67,10 @@ alias gcp='git cherry-pick'
 alias gcam='git commit -a -m'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+# vagrant
 alias vg='vagrant'
+alias vgs='vagrant global-status'
+alias vgsus="vagrant global-status|grep 'running'|awk '{print \$1}'|xargs -r vagrant suspend"
 
 # node
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
