@@ -68,3 +68,10 @@ alias gcam='git commit -a -m'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 alias vg='vagrant'
+
+# node
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+    --cache=$HOME/.npm/.cache/cnpm \
+    --disturl=https://npm.taobao.org/dist \
+    --userconfig=$HOME/.cnpmrc"
+
