@@ -1,4 +1,11 @@
 #!/bin/bash
+
+# timezone
+sudo rm -rf /etc/localtime
+sudo ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+sudo apt-get install -y zsh ntpdate
+
 myhome=~
 
 # add user
