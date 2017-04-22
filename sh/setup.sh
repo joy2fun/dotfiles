@@ -89,7 +89,7 @@ sleep 1
 read -p "Do you need oh-my-zsh?[y/N]" needomz
 case $needomz in
   [Yy]* )
-    sudo git clone git://github.com/joy2fun/oh-my-zsh.git $myhome/.oh-my-zsh
+    sudo git clone git://github.com/joy2fun/oh-my-zsh.git $myhome/.oh-my-zsh --depth=1
     zshbin=$(which zsh)
     sudo usermod -s $zshbin $username
     ;;
