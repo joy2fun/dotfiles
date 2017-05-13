@@ -70,7 +70,7 @@ alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # vagrant
 alias vg='vagrant'
 alias vgs='vagrant global-status'
-alias vgsus="vagrant global-status|grep 'running'|awk '{print \$1}'|xargs -r vagrant suspend"
+alias vgsus="vagrant global-status|grep 'running'|awk '{print \$1}'|xargs vagrant suspend"
 
 # node
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
