@@ -53,11 +53,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-<<<<<<< HEAD
 plugins=(git php laravel5 rsync zsh-autosuggestions vi-mode)
-=======
-plugins=(git composer vagrant docker docker-compose laravel5)
->>>>>>> f442e1c855bee6c0ac2dddae85624df7541469d9
 
 source $ZSH/oh-my-zsh.sh
 
