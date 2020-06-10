@@ -15,6 +15,6 @@
     },
     {
         "key": "ctrl+h",
-        "command": "deleteLeft",
+        "command": "deleteLeft"
     }
 ]
