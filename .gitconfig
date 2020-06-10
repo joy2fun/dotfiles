@@ -4,8 +4,8 @@
     fileMode = false
     excludesfile = ~/.gitignore_global
 [user]
-    name = joy2fun
-    email = web@css.js.cn
+    name = chiao
+    email = php@html.js.cn
 [alias]
     co = checkout
     br = branch

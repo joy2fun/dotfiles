@@ -1,7 +1,9 @@
 # vim: fdm=marker
 export ZSH=$HOME/.oh-my-zsh
 
-DEFAULT_USER="vagrant"
+DEFAULT_USER=$USER
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=250"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,7 +53,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git php laravel5 rsync zsh-autosuggestions vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,4 +95,15 @@ export LC_ALL=en_US.UTF-8
 test -f ~/dotfiles/.zshrc.local && {
     . ~/dotfiles/.zshrc.local
 }
+
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
+
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+bindkey '^B' backward-word
+bindkey '^F' forward-word
+bindkey '^K' kill-line
+
+export GPG_TTY=$(tty)
 

@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Solarized Light",
+    "files.autoSave": "onWindowChange",
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 1,
+    "extensions.ignoreRecommendations": false,
+    "workbench.iconTheme": "ayu",
+}

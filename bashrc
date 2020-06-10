@@ -11,10 +11,3 @@ alias p='php'
 alias php='php'
 unalias php
 
-# github
-alias mygh='start http://github.com/joy2fun'
-
-# search
-alias b='start http://cn.bing.com/search?q='
-alias ghs='start https://github.com/search?q='
-alias phppkg='start https://packagist.org/search/?q='
