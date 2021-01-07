@@ -1,6 +1,6 @@
+.DS_Store
 tags
-vendor
+/vendor
 .idea
 test.log
-composer.lock
 

@@ -21,7 +21,7 @@ else
     alias vv='sudo vim -u ~/.vim/vimrc'
 fi
 
-alias mc='valgrind --tool=memcheck'
+#alias mc='valgrind --tool=memcheck'
 
 # phptag
 alias phptag='ctags --fields=+aimS --languages=php'
