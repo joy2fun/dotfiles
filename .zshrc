@@ -53,12 +53,12 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker laravel5 rsync zsh-autosuggestions vi-mode)
+plugins=(git docker rsync zsh-autosuggestions vi-mode laravel composer encode64 autoenv alias-finder)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-MAINPATH=".:${HOME}/bin:${HOME}/dotfiles/bin:${HOME}/.composer/vendor/bin:${HOME}/.config/composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+MAINPATH=".:$PYENV_ROOT/bin:${HOME}/bin:${HOME}/dotfiles/bin:${HOME}/.composer/vendor/bin:${HOME}/.config/composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH=$MAINPATH
 
 # You may need to manually set your language environment
@@ -83,27 +83,26 @@ test -f ~/dotfiles/libs/common.sh && {
 
 . ~/dotfiles/libs/alias.sh
 
-if iscmd "powerline"; then
-    test -f ~/dotfiles/sh/powerline.zsh && {
-        #. ~/dotfiles/sh/powerline.zsh
-    }
-fi
-
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-test -f ~/dotfiles/.zshrc.local && {
-    . ~/dotfiles/.zshrc.local
+test -f ~/.zshrc.local && {
+    . ~/.zshrc.local
 }
 
-#export NVM_DIR="$HOME/.nvm"
-#. "/usr/local/opt/nvm/nvm.sh"
+#export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
 
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
-
-bindkey '^B' backward-word
-bindkey '^F' forward-word
 bindkey '^K' kill-line
 
+bindkey '^r' history-incremental-search-backward
+bindkey '^s' history-incremental-search-forward
+
 export GPG_TTY=$(tty)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+zstyle ':omz:plugins:alias-finder' longer yes # disabled by default
+zstyle ':omz:plugins:alias-finder' exact yes # disabled by default
+zstyle ':omz:plugins:alias-finder' cheaper yes # disabled by default
 
