@@ -58,3 +58,5 @@ alias k="kubectl --insecure-skip-tls-verify=true "
 alias kr="kubectl --insecure-skip-tls-verify=true get ingressroute -o custom-columns='NAME:.metadata.name, ROUTE:.spec.routes[*].match' "
 alias h=helm
 
+alias curljson='curl -H "Content-Type: application/json"'
+
